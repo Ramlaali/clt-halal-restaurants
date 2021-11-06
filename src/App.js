@@ -1,12 +1,18 @@
+import React from 'react';
+//import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import NavBar from './components/NavBar';
+import About from './components/About';
+import Home from './components/Home';
+import Restaurants from './components/Restaurants';
+import Reviews from './components/Reviews';
 
-import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello Heroku</h1>
-    </div>
-  );
+    
+    <Home/>
+ 
+  )
 }
 
-export default App;
+export default App
