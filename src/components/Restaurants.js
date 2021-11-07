@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect } from "react";
+import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardImage, MDBBtn } from 'mdb-react-ui-kit';
+
 
 function Restaurants(){
 
@@ -13,21 +15,23 @@ function Restaurants(){
 
 
     return(
+
         <div>
-            <h1>Hello</h1>
-            {restaurants.map(restaurant => <h1>{restaurant.name}</h1>)}
+            
+    <MDBCard style={{ maxWidth: '22rem' }}>
+      <MDBCardImage src={restaurants.map(restaurant => <h1>{restaurant.img_url}</h1>)} position='top' alt='...' />
+      <MDBCardBody>
+        <MDBCardTitle>{restaurants.map(restaurant => <h2>{restaurant.name}</h2>)}</MDBCardTitle>
+        <MDBCardText>
+          Some quick example text to build on the card title and make up the bulk of the card's content.
+        </MDBCardText>
+        <MDBBtn href='#'>Button</MDBBtn>
+      </MDBCardBody>
+    </MDBCard>
+            {/* {restaurants.map(restaurant => <h1>{restaurant.name}</h1>)} */}
         </div>
     )
-//     return(
-//     <div class="card" style="width: 18rem;">
-//   <img class="card-img-top" src="..." alt="Card image cap">
-//   <div class="card-body">
-//     <h5 class="card-title">Card title</h5>
-//     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-//     <a href="#" class="btn btn-primary">Go somewhere</a>
-//   </div>
-// </div>
-//     )
+
 
 }
 
